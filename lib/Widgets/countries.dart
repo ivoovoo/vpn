@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:untitled3/BLoC/bloc.dart';
+import 'package:untitled3/BLoC/bloc_events.dart';
 import 'package:untitled3/BLoC_Country/country_bloc.dart';
 import 'package:untitled3/BLoC_Country/country_event.dart';
 import 'package:untitled3/BLoC_Country/country_state.dart';
@@ -29,17 +31,18 @@ class _CountriesState extends State<Countries> {
     setState(() {
       _selectedOption = value;
     });
+    if (context.read<CountryBloc>().state.countryId != _selectedOption) {
+      context
+          .read<CountryBloc>()
+          .add(SetCountry(countryId: _selectedOption!));
+    }
+    context.read<NavigationBloc>().add(GoToScreenA());
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CountryBloc, CountryState>(
       builder: (context, state) {
-        if (state.countryId != _selectedOption) {
-          context
-              .read<CountryBloc>()
-              .add(SetCountry(countryId: _selectedOption!));
-        }
         return Scaffold(
           body: Column(
             children: [

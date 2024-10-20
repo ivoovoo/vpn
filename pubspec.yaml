@@ -21,6 +21,7 @@ dependencies:
   flutter_bloc: ^8.0.0
   equatable: ^2.0.0
   flutter_svg: ^2.0.9
+  lottie: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -89,6 +90,8 @@ flutter:
     - Assets/Images/onbut.svg
     - Assets/Images/con.svg
     - Assets/Images/emo.svg
+    - Assets/Images/crown.svg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

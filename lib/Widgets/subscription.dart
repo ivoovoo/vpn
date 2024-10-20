@@ -15,7 +15,6 @@ class Subscription extends StatefulWidget {
 }
 
 class _SubscriptionState extends State<Subscription> {
-  String? _selectValue;
 
   @override
   Widget build(BuildContext context) {

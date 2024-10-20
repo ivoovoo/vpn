@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -100,24 +100,27 @@ class _CircularButtonState extends State<CircularButton>
               fontSize: 16,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(listOfCountries[state.countryId].flag),
-              SizedBox(
-                width: 20,
-              ),
-              GradientText(
-                listOfCountries[state.countryId].name,
-                style: Style.txtStyle.copyWith(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 35,
+          Container(
+            height: 72,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(listOfCountries[state.countryId].flag),
+                SizedBox(
+                  width: 20,
                 ),
-                gradient: const LinearGradient(
-                  colors: [Colors.blue, Colors.purple],
+                GradientText(
+                  listOfCountries[state.countryId].name,
+                  style: Style.txtStyle.copyWith(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 35,
+                  ),
+                  gradient: const LinearGradient(
+                    colors: [Colors.blue, Colors.purple],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -136,6 +139,7 @@ class _CircularButtonState extends State<CircularButton>
             child: GestureDetector(
               onTap: _isRunning ? _resetStopwatch : _startStopwatch,
               child: Stack(
+
                 alignment: Alignment.center,
                 children: [
                   AnimatedContainer(
@@ -146,14 +150,17 @@ class _CircularButtonState extends State<CircularButton>
                       shape: BoxShape.circle,
                       gradient: _isRunning
                           ? const LinearGradient(
-                              colors: [Colors.purple, Colors.blue],
+                              colors: [
+                                Colors.purple,
+                                Colors.blue,
+                              ],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             )
                           : null,
                       border: _isRunning
                           ? null
-                          : Border.all(color: Colors.white, width: 17),
+                          : Border.all(color: Colors.white, width: 18),
                     ),
                   ),
                   Container(

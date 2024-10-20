@@ -42,7 +42,7 @@ class _OnOffWidgetState extends State<OnOffWidget> {
               ),
               CircularButton(),
               SizedBox(
-                height: 6,
+                height: 18,
               ),
               NavBarModel(),
             ],
