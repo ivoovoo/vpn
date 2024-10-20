@@ -13,14 +13,14 @@ class NavBarModel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 70,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('Assets/Images/navbg.png'),
         ),
       ),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -32,7 +32,7 @@ class NavBarModel extends StatelessWidget {
                   context.read<NavigationBloc>().add(GoToScreenA());
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 width: 70,
               ),
               InkWell(
@@ -41,7 +41,7 @@ class NavBarModel extends StatelessWidget {
                   context.read<NavigationBloc>().add(GoToScreenB());
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 width: 70,
               ),
               InkWell(

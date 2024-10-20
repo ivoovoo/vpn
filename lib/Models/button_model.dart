@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class RoundButton extends StatefulWidget {
+  const RoundButton({super.key});
+
   @override
   _RoundButtonState createState() => _RoundButtonState();
 }
@@ -28,10 +30,10 @@ class _RoundButtonState extends State<RoundButton> {
         ),
         child: Center(
           child: AnimatedContainer(
-            duration: Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 200),
             width: isSelected ? 30 : 0,
             height: isSelected ? 30 : 0,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.purple,
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:untitled3/Models/button_model.dart';
 import 'package:untitled3/Theme/theme.dart';
 
 class CountryModel extends StatelessWidget {
@@ -30,7 +29,7 @@ class CountryModel extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(countryImage),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Text(text,style: Style.txtStyle.copyWith(fontWeight: FontWeight.w400,fontSize: 16),),
                   ],
                 ),
@@ -38,13 +37,12 @@ class CountryModel extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(status),
-                    RoundButton(),
                   ],
                 ),
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           SvgPicture.asset('Assets/Images/line.svg'),
         ],
       ),

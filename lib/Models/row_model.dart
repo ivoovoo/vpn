@@ -19,7 +19,7 @@ class RowWidget extends StatelessWidget {
               style: Style.txtStyle.copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: 24,
-                color: Color.fromRGBO(0, 39, 254, 1),
+                color: const Color.fromRGBO(0, 39, 254, 1),
               ),
             ),
             Text(
@@ -33,18 +33,18 @@ class RowWidget extends StatelessWidget {
         ),
         Row(
           children: [
-            Text(
+            const Text(
               'Pro',
               style: Style.txtStyle,
             ),
-            SizedBox(
+            const SizedBox(
               width: 3,
             ),
-            Text(
+            const Text(
               'Version',
               style: Style.txtStyle,
             ),
-            SizedBox(
+            const SizedBox(
               width: 7,
             ),
             SvgPicture.asset('Assets/Images/Group 7.svg'),
